@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		561064642826898000D6506A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 561064632826898000D6506A /* main.c */; };
+		5610646C282689A100D6506A /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 5610646B282689A100D6506A /* random.c */; };
+		5610646F28268DC500D6506A /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 5610646E28268DC500D6506A /* sha1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		561064602826898000D6506A /* LinuxPRNG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinuxPRNG; sourceTree = BUILT_PRODUCTS_DIR; };
 		561064632826898000D6506A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		5610646B282689A100D6506A /* random.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = random.c; sourceTree = "<group>"; };
+		5610646E28268DC500D6506A /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		561064702826A4F200D6506A /* random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random.h; sourceTree = "<group>"; };
+		561064712826A4F200D6506A /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				561064632826898000D6506A /* main.c */,
+				5610646B282689A100D6506A /* random.c */,
+				5610646E28268DC500D6506A /* sha1.c */,
+				561064702826A4F200D6506A /* random.h */,
+				561064712826A4F200D6506A /* sha1.h */,
 			);
 			path = LinuxPRNG;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5610646F28268DC500D6506A /* sha1.c in Sources */,
+				5610646C282689A100D6506A /* random.c in Sources */,
 				561064642826898000D6506A /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +253,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZFN779X26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +264,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZFN779X26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

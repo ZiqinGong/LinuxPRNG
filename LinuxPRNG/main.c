@@ -2,13 +2,21 @@
 //  main.c
 //  LinuxPRNG
 //
-//  Created by 龚子钦 on 2022/5/7.
+//  Created by Ziqin Gong on 2022/5/7.
 //
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+#include "random.h"
+
+int main(int argc, const char* argv[]) {
+  uint8_t input[10], out[10];
+  for (int i = 0; i < 10; ++i) input[i] = i * i + 1;
+
+  mix(128, 10, input);
+  output(128, 10, out);
+
+  for (int i = 0; i < 10; ++i) printf("%x\n", out[i]);
+
+  return 0;
 }
