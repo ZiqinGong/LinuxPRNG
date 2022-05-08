@@ -67,8 +67,8 @@ void mix(uint8_t pool, uint8_t size, uint8_t input[]) {
       w = (uint32_t)input[j];
       w = _rotate_left(w, rot);
 
-      for (int k = 0; k < 6; ++k) w ^= _input_pool[fb_pos[k]];
-      _input_pool[i] = w;
+      for (int k = 0; k < 6; ++k) w ^= _output_pool[fb_pos[k]];
+      _output_pool[i] = w;
 
       if (i == 0)
         rot = (rot + 14) % 32;

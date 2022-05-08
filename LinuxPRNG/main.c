@@ -10,13 +10,13 @@
 #include "random.h"
 
 int main(int argc, const char* argv[]) {
-  uint8_t input[10], out[10];
-  for (int i = 0; i < 10; ++i) input[i] = i * i + 1;
+  uint8_t input[10], out[100];
+  for (int i = 0; i < 10; ++i) input[i] = i * i;
 
-  mix(128, 10, input);
-  output(128, 10, out);
+  for (int i = 0; i < 1000; ++i) mix(128, 10, input);
+  output(128, 100, out);
 
-  for (int i = 0; i < 10; ++i) printf("%x\n", out[i]);
+  for (int i = 0; i < 100; ++i) printf("%02x\n", out[i]);
 
   return 0;
 }
